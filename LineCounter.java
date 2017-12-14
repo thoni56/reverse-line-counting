@@ -1,15 +1,13 @@
 package se.codersdojo.linecounter;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.StringReader;
 
 public class LineCounter {
 
     private boolean flag = false;
 
     public int countLines(String filename) throws IOException {
-        BufferedReader in = new BufferedReader(new SourceFileReader(filename));
+        SourceFileReader in = new SourceFileReader(filename);
         String str;
         int i = 0;
         while ((str = in.readLine()) != null){
